@@ -4,6 +4,9 @@
   "description": "なるほど、分からん。",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node -r dotenv/config\" ./src/main.ts",
+    "start": "npm run build:live",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
